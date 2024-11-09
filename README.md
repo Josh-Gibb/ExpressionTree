@@ -1,2 +1,2 @@
 # ExpressionTree
-A project showing how to take postfix expression and solve them
+A project showing how to take postfix expressions and solve it
