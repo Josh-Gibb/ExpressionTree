@@ -1,8 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-
 /**
  * @author Josh Gibb
  * ExpressionTree.java
@@ -20,12 +15,12 @@ public class ExpressionTree {
         while(scLine.hasNext()){
             String temp = scLine.next();
             Node node;
-            // If the character is a digit then push node into stack
+            // If the character is a digit, then push the node into the stack
             if(Character.isDigit(temp.charAt(0))){
                 node = new Node(temp);
                 stack.push(node);
             }
-            // If the character is an operator then push node with a left and right child into the stack
+            // If the character is an operator, then push the node with a left and right child into the stack
             else{
                 node = new Node(temp, (Node) stack.pop(), (Node) stack.pop());
                 stack.push(node);
@@ -53,12 +48,12 @@ public class ExpressionTree {
         }
     }
     
-    // Calls the default evaluate expression from root
+    // Calls the default evaluate expression from the root
     public int evaluateExpression(){
         return evaluateExpression(root);
     }
     
-    // Recurively calculates each node to calculate solution
+    // Recursively calculates each node to calculate solution
     public int evaluateExpression(Node n){
         int left = Integer.MIN_VALUE;
         int right = Integer.MIN_VALUE;
